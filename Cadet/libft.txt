@@ -13,3 +13,12 @@ source files to the required output with the flags -Wall, -Wextra and -Werror, u
 cc, and your Makefile must not relink"
 
 What does "not relink" means here?
+
+Page 7
+
+"Some of the functions’ prototypes you have to redo use the ’restrict’
+qualifier. This keyword is part of the c99 standard. It is
+therefore forbidden to include it in your own prototypes and to
+compile your code with the -std=c99 flag."
+
+What does it mean when it says forbidden and to compile code with the -std=c99 flag?
