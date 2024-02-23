@@ -1,1 +1,7 @@
-asd
+Page 3
+
+"Take the time to expand your libft throughout the year. However, when working
+on a new project, don’t forget to ensure the functions used in your library are allowed in
+the project guidelines."
+
+If the function in personal library in conflict with project guidelines, then how?
