@@ -5,3 +5,11 @@ on a new project, don’t forget to ensure the functions used in your library ar
 the project guidelines."
 
 If the function in personal library in conflict with project guidelines, then how?
+
+Page 4
+
+"If the subject requires it, you must submit a Makefile which will compile your
+source files to the required output with the flags -Wall, -Wextra and -Werror, use
+cc, and your Makefile must not relink"
+
+What does "not relink" means here?
