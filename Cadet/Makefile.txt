@@ -59,3 +59,11 @@ files := $(wildcard *.c) != files := *.c
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In lhs, variable files will be assigned with all files matching the patern. In rhs, variable files will be assigned as *.c
 Basically, the wildcard function returns the list of specified pattern
+Wildcard character can be explicitly used for dependencies. Example below
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+print: *.c
+	ls -la $?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This will perform ls -la for all files that end with ".c" in one go

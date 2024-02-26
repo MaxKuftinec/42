@@ -1,4 +1,7 @@
-files := $(wildcard *.c)
+NAME := libft.a
+AR := ar rcs
+LIB := ranlib
 
-print: ${files}
-	ls -la $?
+${NAME}: ${OBJS} # hello1.o hello2.o
+         ${AR} ${NAME} ${OBJS}
+         ${LIB} ${NAME}
