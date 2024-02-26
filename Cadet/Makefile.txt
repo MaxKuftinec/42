@@ -13,3 +13,49 @@ Variables: Makefiles can define variables to store values that are used througho
 Patterns and wildcards: Makefiles can use patterns and wildcards to specify rules that apply to multiple targets or dependencies. This allows for more concise and flexible Makefile syntax.
 
 Makefiles are particularly useful for managing large projects with many source files, where manually compiling each file and managing dependencies would be impractical. By automating the build process, Makefiles help ensure that only the necessary parts of the project are rebuilt when changes are made, saving time and improving productivity for developers.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Having multiple target in one rule is the same as setting each of those targets with the same commands
+Example:
+~~~~~~~~~~~~~~~~
+all: f1.0 f2.0
+
+f1.0 f2.0:
+	echo ${@}
+
+is exactly the same as
+
+f1.0:
+	echo ${@}
+f2.0:
+	echo ${@}
+~~~~~~~~~~~~~~~~
+If we set dependencies of all to f1.0 only
+~~~~~~~~~~~~~~~~
+all: f1.0
+
+f1.0 f2.0:
+    echo $@
+~~~~~~~~~~~~~~~~
+This will only execute f1.0. Here, "$@" is an automatic variable. The "@" specify the target. There is another automatic variable that specify all newer prerequisite than target which is "$?". The "?" is not a wildcard character in this case. Below is a list of commonly used automatic variable:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$@: Represents the target filename.
+$<: Represents the first prerequisite filename.
+$^: Represents the list of all prerequisites (without duplicates).
+$?: Represents the list of prerequisites that are newer than the target.
+$: Represents the stem of the filename (the part that matches the pattern in a pattern rule).
+$%: Represents the target member name in an archive file.
+$*: Represents the stem of the filename (like $, but does not include the suffix).
+$(@D): Represents the directory part of the target filename.
+$(@F): Represents the file part of the target filename.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+clean is not a special makefile keyword and so is all
+
+wildcards has it's own function. It's best to use when assigning patterns to variable
+Look at example below
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+files := $(wildcard *.c) != files := *.c
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In lhs, variable files will be assigned with all files matching the patern. In rhs, variable files will be assigned as *.c
+Basically, the wildcard function returns the list of specified pattern
