@@ -1,7 +1,7 @@
-#include <unistd.h>
+#include "library.h"
 
 int	main(void)
 {
-	write(1, "Hello world!\n", 13);
+	ft_putchar('A');
 	return (0);
 }
