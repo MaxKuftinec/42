@@ -1,0 +1,12 @@
+Strlcat
+- Concatenate a string from src to dst with a specified size
+- Null terminator of the dst string will be replaced with the first character of src and the concatenation starts here
+- If the specified size is smaller than the length of dst, the function won’t operate on dst
+- The return value is the length of (src + size). The value cannot exceed the sum of the length of both strings and cannot be lower than src. Regardless if the function does its operation or not, it always return a value
+
+Len = src + size
+Or 
+Len = src + dst
+
+If size > dst
+	len = src + dst
