@@ -25,5 +25,18 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
-	
+	size_t len;
+	int	start;
+		
+	if (size > ft_strlen(dst) + 1)
+	{
+		len = ft_strlen(src) + ft_strlen(dst);
+		start = ft_strlen(dst) + 1;
+		while((size - start) && *src)
+			dst[start++] = *src++;
+		dst[start] = '\0';
+	}
+	else
+		len = ft_strlen(src) + size;
+	return (len);	
 }
