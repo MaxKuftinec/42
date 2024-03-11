@@ -1,0 +1,37 @@
+DayR
+
+Do as much event for Year of The Dragon
+- Care for usable weapons
+- Need saw
+
+Craft Armoured Uniform
+Build Greenhouse in Tula
+
+Weapon Ranking
+1. TT-33
+    * 129 average dmg
+    * Range: 3
+    * AP: 1
+    * Armor penetration (258 dmg when penetrating ammo)
+    * Pistol ammo x1
+2. Mauser C96
+    * 246 average dmg
+    * Range: 4
+    * AP: 1
+    * Pistol ammo x2 (123 dmg per ammo)
+3. Mosin-Nagant Rifle
+    * 215 average dmg
+    * Range: 5
+    * AP: 2 (107.5 dmg per ap)
+    * Armor penetration (430 dmg when penetrating ammo)
+    * Rifle ammo x1
+4. AKS74U
+    * 277 average dmg
+    * Range: 3
+    * AP: 1
+    * Assault rifle ammo x2 (138.5 dmg per ammo)
+Items on demand
+- Rubber parts(to repair Motorcycle)
+- Spare Weapon Parts(to repair pistols)
+- 213 Bricks needed in Tula
+- Sandpaper to craft Armored Uniform
