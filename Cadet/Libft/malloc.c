@@ -1,18 +1,5 @@
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
-
-/*void *ft_calloc(size_t nitems, size_t size)
-{
-   void *p = malloc(nitems * size);
-   void *q = p;
-   while (size * nitems--)
-   {
-       printf("Check\n");
-       *(char *)q++ = 0;
-   }
-   return (p);
-}*/
 
 int main()
 {
@@ -26,6 +13,5 @@ int main()
     free(q);
     printf("%p\n", p);
     printf("%p\n", q);
-    printf("%ld\n", q - p);
     return (0);
 }
