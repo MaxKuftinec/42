@@ -1,0 +1,7 @@
+Run a random number generator with range of -2147483648 to 2147483647 and assign this number to an int data type
+Predict what character will appear on the stdout with the write system call (1, &a, 4)
+If the byte cannot represent an ascii value, predict the value of the decimal. Verify with printf with %d specifier
+
+State 2 important conclusion that can be made from this exercise
+- The computer store bytes in backward manner
+- int can be treated as char if we read it byte by bite
