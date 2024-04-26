@@ -1,0 +1,1 @@
+Compile a run program that uses preprocessor macro with flag '-D'
