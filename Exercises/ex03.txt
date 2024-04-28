@@ -1,0 +1,31 @@
+Pay attention to the syntax "str[i] = buffer[i++]" from the first code and "str[i++] = buffer[i]" from the 2nd code. Predict the output of both program
+
+
+Code #1
+int main()
+{
+  char str[] = "hello";
+  char buffer[] = "world";
+  
+  int i = 0;
+  str[i] = buffer[i++];
+  printf("%d\n%s\n%s\n", i, str, buffer);
+  return (0);
+}
+
+Code #2
+int main()
+{
+  char str[] = "hello";
+  char buffer[] = "world";
+  
+  int i = 0;
+  str[i++] = buffer[i];
+  printf("%d\n%s\n%s\n", i, str, buffer);
+  return (0);
+}
+
+
+
+Conclusion:
+This means that computer read the line from right to left. In Code#1, the buffer will use the original i value for the index of buffer which is 0 and increment it by 1, so by the time it encounter the next i which is the 'i' in the 'str[i], the 'i' already has a value of 1. This literally translates to: "str[1] = buffer[0]"
