@@ -1,9 +1,8 @@
-j1633837924
-01100001 01100010 0110001
-
-The team consists of 3, Bryan, Jiun and Fatih who had no prior extensive knowledge on programming. Bryan and Fatih came from engineering background while Jiun work in office and may have deal with Excel tasks. All 3 is currently employed. Their program able to run according to the desired output from the subject pdf. Critical case such as -ve, 0 and 1 was handled well. Since their program work as intended, I spent most of the time testing their understanding for what they implemented. There are couple of red flags. They don't know that it is possible to exclude the bracket for control statement (if, while) if the content consists of only one line to execute, yet they have implemented it multiple times in their code. The team does not yet know, that they cannot pass a string literal to a function that takes a char argument except for Bryan who was barely able to predict the outcome when a string or character literal is passed to these functions.
-
-Bryan is the most articulate and expressive of the team. He requested and was granted a paid leave from his employer in Sabah just to allocate 1 month of time for Piscine. As someone who spent a lot of time in the campus for the past week, I do notice that Bryan is spending a lot of time in the campus studying.
+The team consists of 3, Bryan, Jiun and Fatih who had no prior extensive knowledge on programming. Bryan and Fatih came from engineering background while Jiun work in office and may have deal with Excel tasks. All 3 is currently employed. Bryan is the most articulate and expressive of the team. He requested and was granted a paid leave from his employer in Sabah just to allocate 1 month of time for Piscine. As someone who spent a lot of time in the campus for the past week, I do notice that Bryan is spending a lot of time in the campus studying.
 
 
 Jiun 
+
+
+
+Their program able to run according to the desired output from the subject pdf. Critical case such as -ve, 0 and 1 was handled well. Since their program work as intended, I spent most of the time testing their understanding for what they implemented. There are couple of red flags. They don't know that it is possible to exclude the bracket for control statement (if, while) if the content consists of only one line to execute, yet they have implemented it multiple times in their code. The team does not yet know, that they cannot pass a string literal to a function that takes a char argument except for Bryan who was barely able to predict the outcome when a string or character literal is passed to these functions.
