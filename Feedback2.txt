@@ -2,10 +2,10 @@ The team separated the workloads by doing separate rush projects and by doing so
 
 Their codes work as intended. Except for Syamil's code who attempted Rush01. It does prints nothing when (0, 1) but it also prints a newline.
 
-Since their code works as intended, I tested their understanding of their implementation. 
+Since their code works as intended, I tested their understanding of their implementation.
 
-Rui has a solid understanding of his implementation. He was able to easily explains what he does on his part. 
-I also asked him random questions about pointers and how they work and he was able to explain it accurately. Whe
+Rui has a solid understanding of his implementation. He was able to easily explains what he does on his part. Starting from the beginning, he explained his thought process. He said that the characters cannot be printed from top to bottom, and can only be printed from left to right in the terminal. So he has to figure out the way to print characters from left to right and line by line
+I also asked him random questions about pointers and how they work and he was able to explain it accurately.
 
 Syamil was a bit slow. He took his time to look at the code to explain what it does and inept during the evaluation session. He can't seem to grasp complexity of the conversation. I did asked him a few questions regarding the implementation and he couldn't express the logics well. Although his code fail(the rush that he did separately for bonus), he did implemented for an error message to be printed out if the input value is -ve. Something that may not be trivial. Afterall, this person had no prior experience in coding.
 
