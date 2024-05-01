@@ -1,1 +1,11 @@
-asd
+The team separated the workloads by doing separate rush projects and by doing so attempt to finish all the bonus at once except for the argc and argv implementation. Rui attempted 3 rush, which is the mandatory part, Rush03, Rush04 and Rush02. Yen attempted Rush00 and Syamil attempted Rush01
+
+Their codes work as intended. Except for Syamil's code who attempted Rush01. It does prints nothing when (0, 1) but it also prints a newline.
+
+Since their code works as intended, I tested their understanding of their implementation. Rui has a solid understanding of his implementation. He was able to easily explains what he does on his part. I also asked him random questions about pointers and how they work and he was able to explain it accurately.
+
+Syamil was a bit slow. He took his time to look at the code to explain what it does and inept during the evaluation session. He can't seem to grasp complexity of the conversation. Although his code fail, he did implemented for an error message to be printed out if the input value is -ve
+
+Yen was able to explain what his code does and how he does it and his thought process when attempting it. 
+
+Afterwards, we had a bried conversation about his projects. He explained his approached for a function that returns non zero value if the input value to that function is a printable ascii character. I told him that he could just look up the internet to find the range of those values but he was unsatisfied with those results in the internet. So he compared the manual of isprint and the ascii table to confirm
