@@ -4,5 +4,4 @@ The team consists of 3, Bryan, Jiun and Fatih who had no prior extensive knowled
 Jiun 
 
 
-
 Their program able to run according to the desired output from the subject pdf. Critical case such as -ve, 0 and 1 was handled well. Since their program work as intended, I spent most of the time testing their understanding for what they implemented. There are couple of red flags. They don't know that it is possible to exclude the bracket for control statement (if, while) if the content consists of only one line to execute, yet they have implemented it multiple times in their code. The team does not yet know, that they cannot pass a string literal to a function that takes a char argument except for Bryan who was barely able to predict the outcome when a string or character literal is passed to these functions.
