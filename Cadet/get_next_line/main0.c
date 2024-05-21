@@ -61,7 +61,7 @@ char	*get_next_line(int fd) // use the static var to track last index
 	unsigned int	allocation_count;
 
 	buffer[0] = malloc(BUFFER_SIZE);
-	read(fd, buffer[0], BUFFER_SIZE) // Before reading, allocate space. What if read return lower than buffer size?
+	read(fd, buffer[0], BUFFER_SIZE); // Before reading, allocate space. What if read return lower than buffer size?
 	allocation_count = 1;
 	
 	while(buffer_index != allocation_count * BUFFER_SIZE)
