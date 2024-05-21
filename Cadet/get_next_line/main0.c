@@ -63,23 +63,28 @@ char	*get_next_line(int fd) // use the static var to track last index
 	buffer[0] = malloc(BUFFER_SIZE);
 	read(fd, buffer[0], BUFFER_SIZE) // Before reading, allocate space. What if read return lower than buffer size?
 	allocation_count = 1;
+	
 	while(buffer_index != allocation_count * BUFFER_SIZE)
 	{
 		if (copy = 0, buffer[0][buffer_index] == 10)
+		{
+			buffer[1] = malloc(buffer_index + 1);
+			while (copy <= buffer_index)
 			{
-				buffer[1] = malloc((buffer_index + 1) * sizeof(char));
-				while (copy <= buffer_index)
-				{
-					buffer[1][copy] = buffer[0][copy];
-					copy++;
-				}
-				return (free(buffer[0]), free(buffer[1]), buffer[1]);
+				buffer[1][copy] = buffer[0][copy];
+				copy++;
 			}
+			return (free(buffer[0]), free(buffer[1]), buffer[1]);
+		}
 		buffer_index++;
 	}
-	return ();
+	//From this line onward, might put it all in the same while above
+	buffer[1] = malloc(BUFFER_SIZE * allocation_count++);
+	copy everything from buffer0 to buffer1
+	free buffer0
+	buffer0 = malloc(BUFFER_SIZE * allocation_count);
 }
-
+//Current process flow only calculate for 1 allocation. There's 2 critical situation. If one read does not include a newline char and if one read include more than one newline char
 int	main(void)
 {
 	int fd = open("essay.txt", O_RDWR);
