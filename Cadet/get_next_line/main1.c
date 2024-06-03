@@ -43,8 +43,8 @@ char	*ft_realloc(char *memory_block, char *buffer, unsigned int allocation_count
 
 char	*get_next_line(int fd)
 {
-	char			buffer[BUFFER_SIZE];
-	static char		*memory_block;
+	static char		buffer[BUFFER_SIZE];
+	char			*memory_block;
 	size_t			index;
 	unsigned int	allocation_count;
 	int 			i = 0;
