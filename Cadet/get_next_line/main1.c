@@ -55,10 +55,8 @@ char	*get_next_line(int fd)
 	{
 		read(fd, buffer, BUFFER_SIZE);
 		while (index != allocation_count * BUFFER_SIZE)
-		{
 			if (buffer[index++ - ((allocation_count - 1) * BUFFER_SIZE)] == 10)
 				return (memory_block);
-		}
 		memory_block = ft_realloc(memory_block, buffer, allocation_count++);
 	}
 	return (memory_block);
