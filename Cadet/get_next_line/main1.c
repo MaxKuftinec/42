@@ -32,10 +32,10 @@ char	*ft_realloc(char *memory_block, char *buffer, unsigned int allocation_count
 
 	append_index = (allocation_count - 1) * BUFFER_SIZE;
 	buffer_index = 0;
-	if (allocation_count != 1)
-		free(memory_block);
 	new_block = malloc(allocation_count * BUFFER_SIZE);
 	ft_memmove(new_block, memory_block, append_index);
+	if (allocation_count != 1)
+		free(memory_block);
 	while (buffer_index != BUFFER_SIZE)
 		new_block[append_index++] = buffer[buffer_index++];
 	return(new_block);
@@ -44,7 +44,7 @@ char	*ft_realloc(char *memory_block, char *buffer, unsigned int allocation_count
 char	*get_next_line(int fd)
 {
 	char			buffer[BUFFER_SIZE];
-	static char		*memory_block = NULL;
+	static char		*memory_block;
 	size_t			index;
 	unsigned int	allocation_count;
 	int 			i = 0;
@@ -55,10 +55,8 @@ char	*get_next_line(int fd)
 	{
 		read(fd, buffer, BUFFER_SIZE);
 		while (index != allocation_count * BUFFER_SIZE)
-		{
 			if (buffer[index++ - ((allocation_count - 1) * BUFFER_SIZE)] == 10)
 				return (memory_block);
-		}
 		memory_block = ft_realloc(memory_block, buffer, allocation_count++);
 	}
 	return (memory_block);
@@ -66,8 +64,8 @@ char	*get_next_line(int fd)
 
 int	main(void)
 {
-	int fd = open("essay1.txt", O_RDWR);
+	char fd = open("essay1.txt", O_RDWR);
 
-	printf("%d\n", get_next_line(fd)[1]);
+	printf("%s\n", get_next_line(fd));
 	return (0);
 }
