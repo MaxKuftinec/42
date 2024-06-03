@@ -68,6 +68,6 @@ int	main(void)
 {
 	int fd = open("essay1.txt", O_RDWR);
 
-	printf("%s\n", get_next_line(fd));
+	printf("%d\n", get_next_line(fd)[1]);
 	return (0);
 }
