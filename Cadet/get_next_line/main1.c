@@ -51,9 +51,9 @@ char	*get_next_line(int fd)
 
 	allocation_count = 1;
 	index = 0;
-	read(fd, buffer, BUFFER_SIZE);
 	while (i++ != 2)
 	{
+		read(fd, buffer, BUFFER_SIZE);
 		while (index != allocation_count * BUFFER_SIZE)
 		{
 			if (buffer[index++ - ((allocation_count - 1) * BUFFER_SIZE)] == 10)
