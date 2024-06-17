@@ -22,7 +22,7 @@
 
 enum e_num
 {
-	offset = 2 * sizeof(int)
+	offset = 4 * sizeof(int)
 };
 
 void	*ft_memmove(void *dst, const void *src, size_t len);
