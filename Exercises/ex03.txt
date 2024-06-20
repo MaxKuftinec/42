@@ -29,3 +29,4 @@ int main()
 
 Conclusion:
 This means that computer read the line from right to left. In Code#1, the buffer will use the original i value for the index of buffer which is 0 and increment it by 1, so by the time it encounter the next i which is the 'i' in the 'str[i], the 'i' already has a value of 1. This literally translates to: "str[1] = buffer[0]"
+Update(20th June 2024): Above conclusion is wrong. If compiled with -Wall -Wextra -Werror, the compiler will throw an error of unsequenced modification. Different machines may read from left to right or right to left. It is not a good practice to rely on this undefined behaviour. If a variable is present on both lhs and rhs, then unfortunately, it shouldn't be incremented/decremented unless if the programmer knows how the machines read. But even so, then the code would only work for that type of machine.
