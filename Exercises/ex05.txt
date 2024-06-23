@@ -35,4 +35,5 @@ int main()
 
 
 
+
 Answer: There's 2 error. #1 is the uninitialized pointer. The uninitialized pointer is pointing to an arbitrary memory address which doesn't belong to the program when declared. The attempt to modify it by setting it to "42" will cause segmentation fault. #2 is the printf. While not exactly an error, the compiler may throw a warning because the flag specifier is %d while the argument passed is a pointer. This may convert the address of memory address pointer to by p which is in form of hexadecimal into an int data type which most probably cause an int overflow. Putting a %d is most probably not intended. Instead, %p should be use if the programmer wants to see the memory address or dereference the pointer p if the programmer wants to see the value pointer to by p
