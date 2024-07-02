@@ -2,3 +2,77 @@
 2) Create a simple variadic function that demonstrate va_copy
 3) Experiment with va_end of va_copy
   - Create a copy of va_list. Is it necessary to va_end both? Does the order matter? What would happen to a state if the other is cleared up with va_end?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <string.h>
+
+void    foo2(va_list x, int nb)
+{
+    int sum = 0;
+    
+    for (int i = 0; i < nb; i++)
+        sum += va_arg(x, int);
+    return (void)(printf("%d, ", sum));
+}
+
+void foo(int nb, ...)
+{
+    va_list x;
+    
+    va_start(x, nb);
+    foo2(x, nb);
+    return (void)(va_end(x));
+}
+
+void foo3(int nb, ...)
+{
+    va_list x, y;
+    int sum = 0;
+    
+    (va_start(x, nb));
+    for (int i = 0; i < nb; i++)
+        sum += va_arg(x, int);
+    va_copy(y, x);
+    for (int i = 0; i < nb; i++)
+        sum += va_arg(x, int);
+    for (int i = 0; i < nb; i++)
+        sum += va_arg(y, int);
+    return (void)(va_end(x), va_end(y), printf("%d\n", sum));
+}
+
+int dpt(int nb) // Discrete Polynomial Theorem
+{
+    nb = nb * (nb + 1) / 2;
+    return (nb);
+}
+int main()
+{
+    foo3(5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    printf("%d\n", dpt(10) + dpt(10) - dpt(5));
+    return 0;
+}
