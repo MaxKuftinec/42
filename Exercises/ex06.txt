@@ -1,2 +1,4 @@
 1) Create a simple variadic function
 2) Create a simple variadic function that demonstrate va_copy
+3) Experiment with va_end of va_copy
+  - Create a copy of va_list. Is it necessary to va_end both? Does the order matter? What would happen to a state if the other is cleared up with va_end?
