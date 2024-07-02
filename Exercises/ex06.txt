@@ -1,1 +1,2 @@
-Create a simple variadic function
+1) Create a simple variadic function
+2) Create a simple variadic function that demonstrate va_copy
