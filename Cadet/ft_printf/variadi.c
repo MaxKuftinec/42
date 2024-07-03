@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asapar <asapar@student.42kl.edu.my>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/16 12:15:59 by asapar            #+#    #+#             */
+/*   Updated: 2024/03/16 12:15:59 by asapar           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
@@ -33,7 +45,10 @@ static void	ft_printnbrf(int n, int *printed_char)
 	if (n >= 0 && n <= 9)
 		ft_printcharf(48 + n, printed_char);
 	else
-		(ft_printnbrf(n / 10, printed_char), ft_printcharf(48 + ((unsigned int)n % 10), printed_char));
+    {
+        ft_printnbrf(n / 10, printed_char);
+		ft_printcharf(48 + ((unsigned int)n % 10), printed_char);
+    }
 }
 
 static void dectohex(size_t nb, char ascii, int *printed_char)
