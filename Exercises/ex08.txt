@@ -1,0 +1,17 @@
+Create a program that demonstrate the linking of a variable in 2 function. Context:
+
+#include <stdio.h>
+
+void  foo(int nb)
+{
+  nb++;
+}
+
+int  main()
+{
+  int  nb = 42;
+
+  printf("%d\n", nb);
+}
+
+Predict what happen in the program above. If there is something wrong, write the correct linkage
