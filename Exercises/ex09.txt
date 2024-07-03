@@ -1,0 +1,9 @@
+~~Operator Precedence~~
+
+The increment/decrement operator has higher precedence than the dereference operator(*)
+
+#1 Absolute precedence (Postfix)
+-  () [] -> . ++ --
+
+#2 Level 2 precedence (Unary)
+- 	+ - ! ~ ++ - - (type)* & sizeof
