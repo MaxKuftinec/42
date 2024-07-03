@@ -1,0 +1,15 @@
+The prototype of printf is as follow:
+int  printf(char *s, ...);
+
+There's a difference of behaviour of when passing a string literal to the first argument than passing a string pointer
+Example:
+
+int  main
+{
+  char *p = "Hello %x world!\n";
+
+  printf("Hello %x world!\n", 100, 200, 300); // Example 1 with string literal
+  printf(p, 100, 200, 300); // Example 2 passing string pointer to first argument
+}
+
+Predict the difference!
