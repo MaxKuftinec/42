@@ -1,0 +1,35 @@
+This file demonstrate the concept of pointer levels through a circular dependency. Basically, every pointer, regardless of their levels of indirection(the number of asterisks), are basically just pointers except for the fact of how many times they can be dereferenced. A pointer of level 1 can be dereferenced once. Level 2 pointer can be dereferenced twice and so on and so forth. The last dereference will cause the machine to give the actual value of the respective data type that the pointer was declared/casted as. Example, if pointer a is declared as char *a, then dereferencing once will give a char data type value.
+
+#include <stdio.h>
+
+int main()
+{
+    char    *a;
+    char    *b;
+    char    *c;
+    char    ****p;
+    
+    a = (char *)&b;
+    b = (char *)&c;
+    c = (char *)&a;
+    p = (char ****)&a;
+    
+    printf("Address of a:     %p\n", &a);
+    printf("Address of b:     %p\n", &b);
+    printf("Address of c:     %p\n", &c);
+    
+    printf("\n");
+    
+    printf("a pointing to:    %p\n", a);
+    printf("b pointing to:    %p\n", b);
+    printf("c pointing to:    %p\n", c);
+    
+    printf("\n");
+    
+    printf("p pointing to:    %p\n", p);
+    printf("*p pointing to:   %p\n", *p);
+    printf("**p pointing to:  %p\n", **p);
+    printf("***p pointing to: %p\n", ***p);
+    
+    return 0;
+}
