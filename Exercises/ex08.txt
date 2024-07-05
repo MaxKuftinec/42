@@ -7,11 +7,20 @@ void  foo(int nb)
   nb++;
 }
 
+void  foo2(char *buffer)
+{
+  while(*buffer)
+    (*buffer = 97, buffer++);
+}
+
 int  main()
 {
-  int  nb = 42;
+  int   nb = 42;
+  char  buffer[] = "Hello world!\n";
 
+  foo(nb);
+  foo2(buffer);
   printf("%d\n", nb);
 }
 
-Predict what happen in the program above. If there is something wrong, write the correct linkage
+Predict what happen in the program above. If you think the output is not as it is intended to be, write the correct linkage
