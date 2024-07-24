@@ -1,0 +1,38 @@
+#include <unistd.h>
+#include <stdio.h>
+
+int main()
+{
+	char buffer[] = {97, 98, 99, 100, 101, 102, 103, 104};
+
+	for (size_t i = 0; i < 8; i++)
+	{
+		write(1, &buffer[i], 1);
+		write(1, &(char){10}, 1);
+	}
+	printf("%d\n", *(int *)buffer);
+}
+
+/*
+97  = 01100001
+98  = 01100010
+99  = 01100011
+100 = 01100100
+101 = 01100101
+102 = 01100110
+103 = 01100111
+104 = 01101000
+
+01100001 01100010 01100011 01100100 -- Actual memory representation
+01100100 01100011 01100010 01100001 -- Actual binary representation == 1684234849
+
+01100010 01100011 01100100 01100101 -- Actual memory representation
+01100101 01100100 01100011 01100010 -- Actual binary representation == 1701077858
+
+01100011 01100100 01100101 01100110 -- Actual memory representation
+01100110 01100101 01100100 01100011 -- Actual binary representation == 1717920867
+
+01100001 01100010 01100011 01100100 01100101 01100110 01100111 01101000 -- Actual memory representation
+01101000 01100111 01100110 01100101 01100100 01100011 01100010 01100001 -- Actual binary representation == 7523094288207667809
+
+*/
