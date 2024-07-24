@@ -13,32 +13,6 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-t_null_ptr_representation null_ptr_rep;
-
-void init_null_ptr_representation(void)
-{
-#if defined(_WIN32) || defined(_WIN64) || defined(__APPLE__)
-    null_ptr_rep = NULL_PTR_0X0;
-#elif defined(__linux__) || defined(__unix__)
-    null_ptr_rep = NULL_PTR_NIL;
-#else
-    null_ptr_rep = NULL_PTR_NULL;
-#endif
-}
-
-const char *null_ptr_representation_to_string(t_null_ptr_representation rep)
-{
-    switch (rep)
-    {
-        case NULL_PTR_0X0:
-            return "0x0";
-        case NULL_PTR_NIL:
-            return "(nil)";
-        case NULL_PTR_NULL:
-        default:
-            return "(null)";
-    }
-}
 static void	ft_printfstrf(char *s, int *printed_char, char printchar)
 {
 	size_t	strlen;
@@ -77,7 +51,7 @@ static void	dectohex(size_t nb, char ascii, int *printed_char)
 	if (!ascii)
 	{
 		if (!nb)
-			return (ft_printfstrf(NULL_PTR_REPRESENTATION, printed_char, 0));
+			return (ft_printfstrf("0x0", printed_char, 0));
 		else
 		{
 			ft_printfstrf("0x", printed_char, 0);
