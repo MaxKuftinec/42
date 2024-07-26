@@ -3,17 +3,13 @@
 
 # include <stdarg.h>
 
-typedef enum e_null_ptr_representation
-{
-    NULL_PTR_0X0,
-    NULL_PTR_NIL,
-    NULL_PTR_NULL
-} t_null_ptr_representation;
-
-extern t_null_ptr_representation null_ptr_rep;
-
-void init_null_ptr_representation(void);
-const char *null_ptr_representation_to_string(t_null_ptr_representation rep);
+# ifdef __APPLE__
+#  define OP OPEN_MAX
+# elif _WIN32 || _WIN64 || __linux__
+#  define OP FOPEN_MAX
+# else
+#  error "Unsupported operating system"
+# endif
 
 int ft_printf(const char *p, ...);
 
