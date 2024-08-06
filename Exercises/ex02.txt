@@ -1,1 +1,18 @@
 Compile a run program that uses preprocessor macro with flag '-D'
+
+
+Only read this after performing exercise: Any variable(not limited to macro) can be defined during the compilation process. For example: if we have 1 undefined variables and 1 macro as below, we can define them during the compilation process
+
+#include <stdio.h>
+
+#ifndef NUMBER
+#define NUMBER 42
+#endif
+
+int  main()
+{
+  printf("NUMBER + variable = %d\n", NUMBER + variable);
+}
+
+Compilation command: clang -D NUMBER=13 -D variable=42 main.c
+Expected output: NUMBER + variable = 55
