@@ -21,6 +21,7 @@ int  main()
   foo(nb);
   foo2(buffer);
   printf("%d\n", nb);
+  printf("%s\n", buffer);
 }
 
 Predict what happen in the program above. If you think the output is not as it is intended to be, write the correct linkage
