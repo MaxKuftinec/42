@@ -4,7 +4,7 @@ int  printf(char *s, ...);
 There's a difference of behaviour of when passing a string literal to the first argument than passing a string pointer
 Example:
 
-int  main
+int  main()
 {
   char *p = "Hello %x world!\n";
 
