@@ -13,3 +13,12 @@ int  main()
 }
 
 Predict the difference!
+
+
+
+
+
+
+Only read below after the exercise:
+The printf with the string pointer will pass compiler warning of unused variable while the most common usage of printf with
+string literal won't pass compiler warning
