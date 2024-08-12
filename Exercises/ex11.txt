@@ -1,3 +1,15 @@
 This exercise is about distance of variable with data type 'type (*)[n]'
 
 If nothing is written yet, then write one
+
+What would happen if we compile the code below? Predict the outcome before compiling!
+
+#include <stdio.h>
+
+int  main()
+{
+  char a[50];
+  char b[100];
+
+  printf("Distance: %lu\n", &a - &b);
+}
