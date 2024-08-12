@@ -1,0 +1,48 @@
+// This exercise demonstrate duration of variable in a function
+// From the code below, what is happening at 'p = foo()' and 'q = foo()'
+
+#include <stdio.h>
+#include <unistd.h>
+
+char	*foo()
+{
+	char	buffer[50];
+	printf("Inside foo. buffer has address of: %p\n", buffer);
+	printf("Buffer has content: %s\n", buffer);
+	return (buffer); // Why can't I return buffer?
+}
+
+void	ft_strcpy(char *dst, char *src)
+{
+	char	*dest;
+
+	dest = dst;
+	printf("Inserting '%s' to 'p'\n", src);
+	printf("p is pointing to %p\n", dest);
+	while (*src)
+		*dst++ = *src++;
+	printf("Insertion done! dst is now: %s\n", dest);
+	printf("Exiting ft_strcpy\n");
+}
+
+int	main()
+{
+	char	*p;
+	char	*q;
+	char	read_value;
+
+	p = foo();
+	ft_strcpy(p, "Hello world!");
+	printf("Before the loop, p is pointing to: %p\n", p);
+	while (read(0, &read_value, 1), 10 == read_value)
+	{
+		printf("p is pointing to: %p\n", p);
+		write(1, "p is a string of: ", 18);
+		write(1, p, 12);
+		write(1, &(char){10}, 1);
+	}
+	printf("2nd call of foo\n");
+	q = foo();
+	printf("q is pointing to: %p\n", q);
+	printf("q is a string of: %s\n", q);
+}
