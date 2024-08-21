@@ -5,9 +5,7 @@ This project implements a sorting algorithm designed to sort elements present in
 
 Features
 
-Sorts elements in two stacks using a variation of the Shunting Yard algorithm.
-Supports customization for different stack sizes and initial configurations.
-The current project does not parse data from the terminal. So the starting stack has to be configured from the source code and recompile.
+The current project does not parse data from the terminal. So the starting stack has to be configured from the source code and then recompiled to run
 
 # Warning: Time Complexity Nightmare
 - For each element added to the initial stack, the time complexity increase by 100X
