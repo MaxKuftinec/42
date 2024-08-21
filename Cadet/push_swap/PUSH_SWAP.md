@@ -41,15 +41,25 @@ The memory resource complexity increases by 10x for each element added to the in
 Example
 
 Before sorting:
+
 Stack A: 9 4 8 7
+
 Stack B: 0 0 0 0
 
 After sorting (using instructions):
+
 Stack A: 3 4 5 6 7 8 9
-Stack B: 
-Instructions:
+
+Stack B: 0 0 0 0 0 0 0
+
+Instructions
+
 sa
+
 rra
+
 pb
+
 rra
+
 sb
