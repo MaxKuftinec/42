@@ -1,6 +1,6 @@
 # Sorting Two Stacks
-This is an attempt on a 42 project called push_swap
-The first approach is an implementation of brute force linear search through a linked_list
+This is an attempt on a 42 project called push_swap.
+The first approach is an implementation of brute force linear search through a linked_list.
 This project implements a sorting algorithm designed to sort elements present in two separate stacks.
 
 Features
