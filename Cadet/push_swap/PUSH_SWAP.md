@@ -12,8 +12,8 @@ The current project does not parse data from the terminal. So the starting stack
 - By 6 elements total, it takes my computer around 1.5 seconds to compute
 - By 7 elements total, that would take around 2 mins and 40 second
 - I did not try to run the program with 8 elements, but by calculation, it would take around 4 hours to compute
-- By 8 elements total, it would take around 17 days to compute
-- By 9 elements total, it would take around 5 years to compute
+- By 9 elements total, it would take around 17 days to compute
+- By 10 elements total, it would take around 5 years to compute
 - So on and so forth
 
 # How it Works
