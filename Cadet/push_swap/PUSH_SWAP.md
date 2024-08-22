@@ -32,7 +32,10 @@ the last one.
 10) pa: push a - take the first element at the top of b and put it at the top of a. Do nothing if b is empty.
 11) pb: push b - take the first element at the top of a and put it at the top of b. Do nothing if a is empty.
 
-The repeated traversal of the linked_list is the significant drawback of this program. For every permutation generated, the program would travel the linked_list to check if the permutation has been generated before. If the permutation is not found in the linked_list, it will be appended to the head of the linked_list. As the linked_list gets longer and longer, the time it takes to travel can be described as, (n^2 + n) / 2, where n represents the total number of nodes generated in the linked_list
+For every permutation generated, the program would travel the linked_list to check if the permutation has been generated before. If the permutation is not found in the linked_list, it will be appended to the head of the linked_list. The repeated traversal of the linked_list is a significant drawback.  As the linked_list gets longer and longer, the time it takes to compute the solution, T, where n represents the total number of nodes generated in the linked_list, can be estimated roughly as
+
+$$ T = (n^2 + n) / 2 $$
+
 
 The memory resource complexity increases by 10x for each element added to the initial stack
 
